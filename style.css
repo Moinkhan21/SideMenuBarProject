@@ -1,0 +1,146 @@
+/* Apply universal styling to all elements */
+* {
+    margin: 0; /* Removes default margin for consistency across browsers */
+    padding: 0; /* Removes default padding for consistency */
+    font-family: "Poppins", sans-serif; /* Sets Poppins font for the entire document */
+}
+
+/* Main container with background image */
+.main_box {
+    background: url("photo.jpg"); /* Background image */
+    height: 100vh; /* Ensures the height of the container takes up the entire viewport */
+    background-size: cover; /* Makes the background image cover the entire container, cropping if necessary */
+}
+
+/* Hamburger button for opening the sidebar */
+.btn_one i {
+    color: white; /* Sets icon color to white */
+    font-size: 30px; /* Sets the size of the hamburger icon */
+    font-weight: 700; /* Makes the icon bold */
+    position: absolute; /* Positions the icon absolutely */
+    left: 16px; /* Positions the icon 16px from the left of its container */
+    line-height: 60px; /* Vertically centers the icon */
+    cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+    transition: all 0.3s linear; /* Smooth transition effect for hover and other interactions */
+}
+
+/* Sidebar menu container */
+.sidebar_menu {
+    position: fixed; /* Fixes the sidebar in place relative to the viewport */
+    left: -300px; /* Initially hides the sidebar off-screen */
+    height: 100vh; /* Sidebar height equals the viewport height */
+    width: 300px; /* Sets the width of the sidebar */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); /* Subtle shadow around the sidebar */
+    transition: all 0.3s linear; /* Smooth transition when the sidebar is toggled */
+}
+
+/* Logo section inside the sidebar */
+.sidebar_menu .logo {
+    position: absolute; /* Positions the logo at the top of the sidebar */
+    width: 100%; /* Makes the logo container span the full width */
+    line-height: 60px; /* Vertically centers the logo */
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5); /* Adds subtle shadow under the logo */
+    height: 60px; /* Fixed height for the logo container */
+}
+
+/* Styling for the logo link */
+.sidebar_menu .logo a {
+    position: absolute; /* Positions the logo text absolutely */
+    left: 50px; /* Positions it 50px from the left */
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 20px; /* Sets the font size of the logo */
+    font-weight: 500; /* Sets the font weight */
+}
+
+/* Button to close the sidebar */
+.sidebar_menu .btn_two i {
+    color: grey; /* Sets the close button color to grey */
+    font-size: 25px; /* Sets the size of the close icon */
+    line-height: 60px; /* Vertically centers the close icon */
+    position: absolute; /* Positions the close button absolutely */
+    left: 270px; /* Positions it 270px from the left */
+    opacity: 0; /* Initially hides the close button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Menu styling inside the sidebar */
+.sidebar_menu .menu {
+    position: absolute; /* Positions the menu absolutely inside the sidebar */
+    width: 100%; /* Ensures the menu spans the full width of the sidebar */
+    top: 80px; /* Positions the menu 80px from the top to avoid overlap with the logo */
+}
+
+/* Styling for each menu item */
+.sidebar_menu .menu li {
+    margin-top: 6px; /* Adds spacing between menu items */
+    padding: 14px 20px; /* Adds padding inside each menu item */
+}
+
+/* Styling for menu icons and links */
+.sidebar_menu .menu i, a {
+    color: white; /* Sets icon and link color to white */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 20px; /* Sets font size for the links */
+}
+
+/* Padding for icons inside the menu */
+.sidebar_menu .menu i {
+    padding-right:  8px; /* Adds right padding for spacing between icon and text */
+}
+
+/* Social media section at the bottom of the sidebar */
+.sidebar_menu .social_media {
+    position: absolute; /* Positions the social media section absolutely */
+    left: 25%; /* Positions it 25% from the left for centering */
+    bottom: 50px; /* Positions the social media section 50px from the bottom */
+}
+
+/* Styling for social media icons */
+.sidebar_menu .social_media i {
+    color: white; /* Sets icon color to white */
+    opacity: 0.5; /* Sets the initial opacity of the icons */
+    padding: 0 5px; /* Adds padding between icons */
+}
+
+/* Hides the checkbox by default */
+#check {
+    display: none; /* Hides the checkbox element */
+}
+
+/* Hover effect for menu items */
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); /* Adds a subtle box-shadow effect when hovering over a menu item */
+}
+
+/* Hover effect for the hamburger icon */
+.btn_one i:hover {
+    font-size: 40px; /* Increases the size of the hamburger icon on hover */
+}
+
+/* Hover effect for the close icon */
+.btn_two i:hover {
+    font-size: 30px; /* Increases the size of the close icon on hover */
+}
+
+/* Hover effect for social media icons */
+.sidebar_menu .social_media i:hover {
+    opacity: 1; /* Makes the social media icons fully opaque on hover */
+    transform: scale(1.1); /* Slightly enlarges the icons on hover */
+}
+
+/* Sidebar visibility when the checkbox is checked */
+#check:checked ~ .sidebar_menu {
+    left: 0; /* Moves the sidebar into view */
+}
+
+/* Hides the hamburger icon when the sidebar is open */
+#check:checked ~ .btn_one i {
+    opacity: 0; /* Hides the hamburger icon */
+}
+
+/* Shows the close icon when the sidebar is open */
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1; /* Makes the close icon visible */
+}

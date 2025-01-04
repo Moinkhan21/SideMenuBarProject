@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /> <!-- Specifies the character encoding to UTF-8 for supporting all characters -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Ensures compatibility with modern browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes the layout responsive on different screen sizes -->
+    <title>Side Menu Design</title> <!-- Sets the title of the page -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file for styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnects to Google's font server for faster loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Preconnects to Google's font CDN with CORS support -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" /> <!-- Links the Poppins font for use in the page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> <!-- Links to Font Awesome for icons -->
+  </head>
+  <body>
+    <div class="main_box"> <!-- Wrapper div for the entire sidebar layout -->
+      <input type="checkbox" id="check" /> <!-- Checkbox to toggle the sidebar menu visibility -->
+      
+      <!-- Button to open the sidebar menu -->
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i> <!-- Hamburger icon to indicate menu toggle -->
+        </label>
+      </div>
+
+      <!-- Sidebar menu container -->
+      <div class="sidebar_menu">
+        
+        <!-- Logo section of the sidebar -->
+        <div class="logo">
+          <a href="#">Photography</a> <!-- Logo link for the sidebar -->
+        </div>
+
+        <!-- Button to close the sidebar menu -->
+        <div class="btn_two">
+          <label for="check">
+            <i class="fa-solid fa-xmark"></i> <!-- Close icon to hide the sidebar -->
+          </label>
+        </div>
+
+        <!-- Navigation menu items -->
+        <div class="menu">
+          <ul> <!-- Unordered list for navigation links -->
+            <li>
+              <i class="fa-solid fa-image"></i> <!-- Gallery icon -->
+              <a href="#">Gallery</a> <!-- Gallery link -->
+            </li>
+            <li>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> <!-- Shortcuts icon -->
+              <a href="#">Shortcuts</a> <!-- Shortcuts link -->
+            </li>
+            <li>
+              <i class="fa-solid fa-photo-film"></i> <!-- Exhibits icon -->
+              <a href="#">Exhibits</a> <!-- Exhibits link -->
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-days"></i> <!-- Events icon -->
+              <a href="#">Events</a> <!-- Events link -->
+            </li>
+            <li>
+              <i class="fa-solid fa-store"></i> <!-- Store icon -->
+              <a href="#">Store</a> <!-- Store link -->
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i> <!-- Contact icon -->
+              <a href="#">Contact</a> <!-- Contact link -->
+            </li>
+            <li>
+              <i class="fa-regular fa-comments"></i> <!-- Feedback icon -->
+              <a href="#">Feedback</a> <!-- Feedback link -->
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social media links section -->
+        <div class="social_media">
+          <ul> <!-- Unordered list for social media links -->
+            <a href="#"><i class="fa-brands fa-facebook"></i></a> <!-- Facebook icon link -->
+            <a href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter icon link -->
+            <a href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram icon link -->
+            <a href="#"><i class="fa-brands fa-youtube"></i></a> <!-- YouTube icon link -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
